@@ -4,7 +4,7 @@ permalink: /AboutMe/
 title: About Me
 description: Here are things other than scientific research
 nav: true
-nav_order: 5
+nav_order: 3
 
 profile:
   align: right
