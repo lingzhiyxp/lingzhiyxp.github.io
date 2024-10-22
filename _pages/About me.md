@@ -31,7 +31,7 @@ Taking online notes on Notion is one of my habbits during my undergraduate studi
 
 * *<a href="https://open.spotify.com/album/70OkRXiiwdTCtZ9YiPBzPp">American Football</a>*, American Football
 
-* *<a href="https://open.spotify.com/album/4m2880jivSbbyEGAKfITCa">Random Access Memories, Daft Punk
+* *<a href="https://open.spotify.com/album/4m2880jivSbbyEGAKfITCa">Random Access Memories</a>*, Daft Punk
 
 ## My Video Channels
 
