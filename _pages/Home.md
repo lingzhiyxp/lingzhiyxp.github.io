@@ -22,7 +22,7 @@ My current research primarily concentrates on **Trustworthy Machine Learning**, 
 
 You could refer to my <a href="https://lingzhiyxp.github.io/assets/pdf/Lingzhi_Yuan_CV_10.10.pdf">resume</a> for more detail.
 
-Find other interesting things about me in </a href="https://lingzhiyxp.github.io/AboutMe/">this page🧩</a>!xw
+Find other interesting things about me in <a href="https://lingzhiyxp.github.io/AboutMe/">this page🧩</a>!xw
 
 <!--Refer to my <a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" target="_blank">resume</a> for more detail.-->
 
