@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I become a research student at <a href='https://www.usslab.org/'>USSLAB!<a> supervised by Prof. Xiaoyu Ji and Prof. Yanjiao Chen.
+I became a research student at <a href='https://www.usslab.org/'>USSLAB!<a> supervised by Prof. Xiaoyu Ji and Prof. Yanjiao Chen.
