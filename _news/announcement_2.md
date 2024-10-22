@@ -6,4 +6,4 @@ inline: false
 related_posts: false
 ---
 
-I became a research internship student at University of Chicago, supervised by Prof. Bo Li.
+I became a research internship student at <a href="https://aisecure.github.io/">Secure Learning Lab</a>, University of Chicago, supervised by Prof. Bo Li.
