@@ -9,6 +9,7 @@ profile:
   image: mine.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
+    <p>yuan_lz@zju.edu.cn</p>
     <p>Hangzhou, China</p>
 
 news: true # includes a list of news items
