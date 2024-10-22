@@ -16,7 +16,7 @@ Here are things other than scientific research
 
 ## Personal Interests
 
-I love music🎶, especially different kinds of independent music (rock, r&b and so on). I also love to play keyboard/piano🎹 and I used to play keyboards in a band on campus.
+I love music🎶, especially different kinds of independent music (Rock, R&B and so on). I also love to play keyboard/piano🎹 and I used to play keyboards in a band on campus.
 
 I won't miss live performances by my favorite musicians. I believe watching music live is the best way to enjoy music.
 
@@ -30,11 +30,11 @@ Taking online notes on Notion is one of my habbits during my undergraduate studi
 
 ## Selected Favorite Albums
 
-* *<a href="https://open.spotify.com/album/7iRBwwZ1BSFAyxDgvmz7fZ">Summer/Fever</a>*, Sodagreen
+* *<a href="https://open.spotify.com/album/7iRBwwZ1BSFAyxDgvmz7fZ">Summer/Fever</a>*, Sodagreen, 2009
 
-* *<a href="https://open.spotify.com/album/70OkRXiiwdTCtZ9YiPBzPp">American Football</a>*, American Football
+* *<a href="https://open.spotify.com/album/70OkRXiiwdTCtZ9YiPBzPp">American Football</a>*, American Football, 1999
 
-* *<a href="https://open.spotify.com/album/4m2880jivSbbyEGAKfITCa">Random Access Memories</a>*, Daft Punk
+* *<a href="https://open.spotify.com/album/4m2880jivSbbyEGAKfITCa">Random Access Memories</a>*, Daft Punk, 2013
 
 
 ## My Video Channel
