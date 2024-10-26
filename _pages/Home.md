@@ -9,6 +9,7 @@ profile:
   image: mine.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
+    <p>lingzhiyxp [at] gmail.com</p>
     <p>yuan_lz [at] zju.edu.cn</p>
     <p>Hangzhou, China</p>
 
