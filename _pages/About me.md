@@ -2,7 +2,7 @@
 layout: about
 permalink: /AboutMe/
 title: About Me
-description: Here are things other than scientific research
+description: Here are things other than scientific research.
 nav: true
 nav_order: 3
 
