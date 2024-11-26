@@ -22,7 +22,7 @@ I’m currently a final year Undergraduate Student majoring in Automation at <a 
 
 My current research primarily concentrates on **Trustworthy Machine Learning**, with a particular emphasis on enhancing the safety and robustness of advanced models. My research centers on exploring the vulnerability of cutting-edge ML models, especially **Multi-modal Models** (Text-to-Image model, VLM, Audio LLM etc.) and developing reliable defense mechanisms to safeguard their widespread deployments. By tackling these challenges, I aim to contribute to the development of AI technologies that are not only high-performing but also **secure, transparent, and aligned with ethical standards**.
 
-You could refer to my <a href="https://lingzhiyxp.github.io/assets/pdf/CV_11_18.pdf">resume</a> for more detail.
+You could refer to my <a href="https://lingzhiyxp.github.io/assets/pdf/CV_11_26.pdf">resume</a> for more detail.
 
 Find other interesting things about me in <a href="https://lingzhiyxp.github.io/AboutMe/">this page🧩</a>!
 
