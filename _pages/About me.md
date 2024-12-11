@@ -11,7 +11,7 @@ profile:
   image: mine.jpg
 
 ---
-Here are things other than scientific research
+Here are things other than scientific research.
 
 
 ## Personal Interests
