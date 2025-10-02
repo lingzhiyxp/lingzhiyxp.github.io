@@ -2,7 +2,7 @@
 layout: about
 title: Home
 permalink: /
-subtitle: <a href='https://umd.edu/'>University of Maryland</a>, Department of Computer Science.
+subtitle: <a href='https://umd.edu/'>University of Maryland, College Park</a>, Department of Computer Science.
 
 profile:
   align: right
@@ -22,7 +22,7 @@ I’m currently a first year PhD Student in Computer Science at <a href='https:/
 
 During my undergraduate studies, I was also a member of <a href='http://ckc.zju.edu.cn/ckcen/2022/0225/c44633a2500643/page.htm'>Intensive Training Honors Program of Innovation and Entrepreneurship (ITP)</a> at <a href='http://ckc.zju.edu.cn/ckcen/'>Chu Kochen Honors College</a>.
 
-My current research primarily concentrates on **Trustworthy Machine Learning**, with a particular emphasis on enhancing the safety and robustness of advanced models. My research centers on exploring the vulnerability of cutting-edge ML models, especially **Multi-modal Models** (Text-to-Image model, VLM, Audio LLM etc.) and developing reliable defense mechanisms to safeguard their widespread deployments. By tackling these challenges, I aim to contribute to the development of AI technologies that are not only high-performing but also **secure, transparent, and aligned with ethical standards**.
+My current research primarily concentrates on **Trustworthy Machine Learning**, with a particular emphasis on enhancing the safety and robustness of advanced models. My research centers on exploring the vulnerability of cutting-edge ML models and developing reliable defense mechanisms to safeguard their widespread deployments. By tackling these challenges, I aim to contribute to the development of AI technologies that are not only high-performing but also **secure, transparent, and aligned with ethical standards**.
 
 You could refer to my <a href="https://lingzhiyxp.github.io/assets/pdf/CV_2_12.pdf">resume</a> for more detail.
 
