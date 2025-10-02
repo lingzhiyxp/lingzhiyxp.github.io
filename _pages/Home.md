@@ -18,11 +18,11 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I’m currently a first year PhD Student in Computer Science at <a href='https://umd.edu/'>University of Maryland (UMD)</a>, advised by Professor <a href="https://furong-huang.com/">Furong Huang</a>. Before that, I obtained my BEng degree at <a href='https://www.zju.edu.cn/english/'>Zhejiang University (ZJU)</a> majoring in Automation. I was also a research internship student during the summer of 2024 at <a href='https://www.uchicago.edu/'>University of Chicago (UChicago)</a>, Secure Learning Lab advised by Professor <a href=' https://aisecure.github.io/'> Bo Li</a>. 
+I’m currently a first-year PhD Student in Computer Science at <a href='https://umd.edu/'>University of Maryland, College Park</a>, advised by Professor <a href="https://furong-huang.com/">Furong Huang</a>. Before that, I obtained my BEng degree at <a href='https://www.zju.edu.cn/english/'>Zhejiang University</a> majoring in Automation. I was also a research assistant at <a href='https://www.uchicago.edu/'>University of Chicago</a>, Secure Learning Lab advised by Professor <a href=' https://aisecure.github.io/'> Bo Li</a>. 
 
 During my undergraduate studies, I was also a member of <a href='http://ckc.zju.edu.cn/ckcen/2022/0225/c44633a2500643/page.htm'>Intensive Training Honors Program of Innovation and Entrepreneurship (ITP)</a> at <a href='http://ckc.zju.edu.cn/ckcen/'>Chu Kochen Honors College</a>.
 
-My current research primarily concentrates on **Trustworthy Machine Learning**, with a particular emphasis on enhancing the safety and robustness of advanced models. My research centers on exploring the vulnerability of cutting-edge ML models and developing reliable defense mechanisms to safeguard their widespread deployments. By tackling these challenges, I aim to contribute to the development of AI technologies that are not only high-performing but also **secure, transparent, and aligned with ethical standards**.
+My current research concentrates on **Trustworthy Machine Learning**, with a particular emphasis on enhancing the safety and robustness of advanced models. My research centers on exploring the vulnerability of cutting-edge ML models and developing reliable defense mechanisms to safeguard their widespread deployments. By tackling these challenges, I aim to contribute to the development of AI technologies that are not only high-performing but also **secure, transparent, and aligned with ethical standards**.
 
 You could refer to my <a href="https://lingzhiyxp.github.io/assets/pdf/CV_2_12.pdf">resume</a> for more detail.
 
