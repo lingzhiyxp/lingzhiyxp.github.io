@@ -16,9 +16,9 @@ Here are things other than scientific research.
 
 ## Personal Interests
 
-I love music🎶, especially different kinds of independent music (Rock, R&B and so on). I also love to play keyboard/piano🎹 and I used to play keyboards in a band on campus.
+I love music🎶, especially different kinds of indie music (Rock, R&B and so on). I also love to play keyboard/piano🎹 and I used to play keyboard in bands on campus.
 
-I won't miss live performances by my favorite musicians. I believe watching music live is the best way to enjoy music.
+I won't miss live performances by my favorite musicians. I believe watching live show is the best way to enjoy music.
 
 I enjoy watching films & episodes at my free time.
 
