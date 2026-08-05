@@ -1,0 +1,692 @@
+/* ==========================================================================
+   Lingzhi Yuan — personal site
+   Plain CSS, no build step. Edit freely.
+   ========================================================================== */
+
+/* --- Design tokens ------------------------------------------------------ */
+
+/* Dark is the default for every visitor, regardless of their OS setting.
+   The toggle in the top bar sets data-theme="light" on <html> and stores the
+   choice in localStorage. */
+
+:root {
+  --background: #2a352a;
+  --foreground: #f4f3ee;
+
+  /* ambient painted backdrop — muted sage green, anchored on #588157 */
+  --ambient-ink: rgba(42, 53, 42, 0.9);
+  --ambient-glow-a: rgba(88, 129, 87, 0.3);
+  --ambient-glow-b: rgba(118, 130, 100, 0.18);
+  --ambient-glow-c: rgba(80, 116, 104, 0.2);
+  --ambient-grid-color: rgba(255, 255, 255, 0.05);
+  --ambient-sheen: rgba(150, 190, 155, 0.05);
+  --ambient-blend: screen;
+  --ambient-saturate: 85%;
+
+  --selection-bg: #ffc242;
+  --selection-text: #1f1f1f;
+
+  --heading: #ffc242;
+  --link-hover: #ffc242;
+  --muted: #a4a89a;
+  --muted-light: #767b6d;
+  --underline-color: #8fae8c;
+
+  --badge-bg: #ffffff10;
+  --badge-border: #ffffff25;
+  --thumb-border: #ffffff25;
+
+  --nav-bg: rgba(42, 53, 42, 0.55);
+  --nav-border: rgba(255, 255, 255, 0.08);
+
+  /* One colour for every venue badge. Give a venue its own value here if you
+     ever want them to differ again. */
+  --badge-color: #d4e79e;
+  --badge-preprint: var(--badge-color);
+  --badge-icml: var(--badge-color);
+  --badge-iclr: var(--badge-color);
+  --badge-tifs: var(--badge-color);
+  --badge-default: var(--badge-color);
+}
+
+:root[data-theme="light"] {
+  --background: #fbfcf9;
+  --foreground: #24231e;
+
+  --ambient-ink: rgba(252, 253, 250, 0.87);
+  --ambient-glow-a: rgba(88, 129, 87, 0.3);
+  --ambient-glow-b: rgba(150, 168, 140, 0.24);
+  --ambient-glow-c: rgba(116, 148, 124, 0.28);
+  --ambient-grid-color: rgba(48, 68, 50, 0.1);
+  --ambient-sheen: rgba(140, 170, 145, 0.06);
+  --ambient-blend: multiply;
+  --ambient-saturate: 92%;
+
+  --selection-bg: #b7cdb4;
+  --selection-text: #1f1f1f;
+
+  --heading: #2f4488;
+  --link-hover: #588157;
+  --muted: #6a7264;
+  --muted-light: #9aa294;
+  --underline-color: #1e40af;
+
+  --badge-bg: #f7f4f560;
+  --badge-border: #f7f4f580;
+  --thumb-border: #f7f4f580;
+
+  --nav-bg: rgba(251, 252, 249, 0.55);
+  --nav-border: rgba(48, 68, 50, 0.1);
+
+  --badge-color: #14647a;
+}
+
+/* --- Base --------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: "Avenir Next", "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.serif {
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
+    Georgia, serif;
+}
+
+.cjk {
+  font-family: "Songti SC", STSong, "Noto Serif SC", serif;
+}
+
+/* --- Ambient backdrop --------------------------------------------------- */
+
+.site-shell {
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+  overflow: clip;
+}
+
+/* The dot texture stays on regardless — it is not a gradient. */
+.site-shell::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.6;
+  background-image: radial-gradient(
+    circle at center,
+    var(--ambient-grid-color) 0 1px,
+    transparent 1.2px
+  );
+  background-position: 0 0;
+  background-size: 22px 22px;
+  mix-blend-mode: var(--ambient-blend);
+}
+
+/* ---- Ambient gradient wash (currently OFF) -----------------------------
+   To switch it back on, add the `ambient` class in the HTML:
+       <div class="site-shell ambient">
+   in both index.html and about/index.html. Nothing else needs to change. */
+
+.site-shell.ambient::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  background: radial-gradient(
+      circle at 15% 18%,
+      var(--ambient-glow-a),
+      transparent 34%
+    ),
+    radial-gradient(circle at 82% 20%, var(--ambient-glow-b), transparent 30%),
+    radial-gradient(circle at 50% 78%, var(--ambient-glow-c), transparent 38%),
+    linear-gradient(
+      140deg,
+      var(--ambient-ink),
+      color-mix(in srgb, var(--ambient-ink) 78%, #fff)
+    );
+  filter: saturate(var(--ambient-saturate));
+}
+
+.site-shell.ambient::after {
+  background-image: linear-gradient(
+      115deg,
+      transparent 0,
+      var(--ambient-sheen) 38%,
+      transparent 72%
+    ),
+    radial-gradient(circle at center, var(--ambient-grid-color) 0 1px, transparent 1.2px);
+  background-position: 50%, 0 0;
+  background-size: cover, 22px 22px;
+}
+
+.site-content {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+  max-width: 1120px;
+  flex: 1;
+  padding: 2rem 1.5rem 4rem;
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding: 2.5rem 4rem 6rem;
+  }
+}
+
+/* --- Top navigation ----------------------------------------------------- */
+
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.topnav-inner {
+  width: 100%;
+  max-width: 1120px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0.9rem 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .topnav-inner {
+    padding: 0.9rem 4rem;
+  }
+}
+
+.topnav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  transition: color 0.15s ease;
+}
+
+.topnav a:hover,
+.topnav a[aria-current="page"] {
+  color: var(--foreground);
+}
+
+.topnav svg {
+  stroke: currentColor;
+}
+
+.theme-toggle {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.15rem;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  line-height: 0;
+  transition: color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--foreground);
+}
+
+.theme-toggle .icon-moon {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-toggle .icon-sun {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-toggle .icon-moon {
+  display: block;
+}
+
+/* Keep anchored sections clear of the sticky bar. */
+[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* --- Header: portrait + intro ------------------------------------------- */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.intro-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .intro-aside {
+    width: auto;
+    /* Drop the photo down so its top edge lines up with the first
+       paragraph rather than with the <h1>. */
+    padding-top: 3.5rem;
+  }
+}
+
+.portrait {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .portrait {
+    width: 300px;
+    min-width: 300px;
+  }
+}
+
+/* Narrower variant, for tall (portrait-orientation) photos. */
+@media (min-width: 768px) {
+  .portrait--narrow {
+    width: 230px;
+    min-width: 230px;
+  }
+}
+
+/* Near-native framing: only a slice is trimmed off the right-hand side.
+   Raise the aspect-ratio number for a wider (less cropped) photo. */
+.portrait img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.12 / 1;
+  object-fit: cover;
+  object-position: 30% center;
+  border-radius: 0.5rem;
+}
+
+/* Tall photos are shown whole. */
+.portrait--narrow img {
+  aspect-ratio: auto;
+  object-fit: fill;
+}
+
+.portrait-caption {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.portrait:hover .portrait-caption,
+.portrait:focus-within .portrait-caption {
+  opacity: 1;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Each row is centred on its own, so 3-over-2 stays symmetrical. */
+.socials-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.1rem;
+}
+
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 0.15s ease;
+}
+
+.socials a:hover {
+  color: var(--link-hover);
+}
+
+.socials svg {
+  stroke: currentColor;
+  transition: opacity 0.15s ease;
+}
+
+.socials a:hover svg {
+  opacity: 0.4;
+}
+
+.intro-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.intro-body ul {
+  margin: -0.25rem 0 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.intro-body li::marker {
+  color: var(--muted-light);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.25rem;
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+/* Inline links inside prose */
+.tag {
+  font-weight: 640;
+  transition: color 0.15s ease;
+}
+
+.tag:hover {
+  color: var(--link-hover);
+}
+
+.u {
+  text-decoration: underline;
+  text-decoration-color: var(--underline-color);
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+}
+
+.u:hover {
+  color: var(--link-hover);
+}
+
+.email {
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.email .hint {
+  display: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.email:hover .hint {
+  display: inline;
+}
+
+/* --- Sections ----------------------------------------------------------- */
+
+.section {
+  margin-top: 5rem;
+}
+
+.section-title {
+  margin: 0 0 1.25rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+
+/* --- News --------------------------------------------------------------- */
+
+.news {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.news .date {
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Portfolio ---------------------------------------------------------- */
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .portfolio {
+    gap: 2rem;
+  }
+}
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  min-width: 0;
+}
+
+/* Fade-in only when JS is running, so the content is never hidden without it. */
+.js .entry {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.js .entry.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .entry {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .entry {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+
+.entry-thumb {
+  width: 100%;
+  max-width: 420px;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .entry-thumb {
+    width: 280px;
+    min-width: 280px;
+  }
+}
+
+.entry-thumb img {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid var(--thumb-border);
+}
+
+.entry-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+  min-width: 0;
+}
+
+.badge {
+  align-self: flex-start;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  color: var(--badge-default);
+}
+
+.badge--preprint { color: var(--badge-preprint); }
+.badge--icml     { color: var(--badge-icml); }
+.badge--iclr     { color: var(--badge-iclr); }
+.badge--tifs     { color: var(--badge-tifs); }
+
+.entry-title {
+  margin: 0.25rem 0 0;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  font-weight: 570;
+}
+
+.authors {
+  color: inherit;
+}
+
+.authors .sep {
+  color: var(--muted-light);
+}
+
+.authors .me {
+  font-weight: 640;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.entry-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
+
+.entry-links a {
+  transition: color 0.1s ease;
+}
+
+.entry-links a:hover {
+  color: var(--link-hover);
+}
+
+/* --- Prose (About page) ------------------------------------------------- */
+
+.section--flush {
+  margin-top: 2.5rem;
+}
+
+.prose {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* Keep the measure readable, and centred, now that nothing sits beside it. */
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+/* Pages with no photo beside the intro (About Me): centre the heading over the
+   prose column instead of leaving it hard against the left edge. */
+.intro > .intro-body:only-child {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.prose h2 {
+  margin: 2rem 0 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+
+.prose ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
