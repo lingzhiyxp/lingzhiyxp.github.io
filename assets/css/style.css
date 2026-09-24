@@ -46,6 +46,7 @@
   --badge-icml: var(--badge-color);
   --badge-iclr: var(--badge-color);
   --badge-tifs: var(--badge-color);
+  --badge-neurips: var(--badge-color);
   --badge-default: var(--badge-color);
 }
 
@@ -615,6 +616,7 @@ h1 {
 .badge--icml     { color: var(--badge-icml); }
 .badge--iclr     { color: var(--badge-iclr); }
 .badge--tifs     { color: var(--badge-tifs); }
+.badge--neurips  { color: var(--badge-neurips); }
 
 .entry-title {
   margin: 0.25rem 0 0;
