@@ -5,8 +5,8 @@ Whatever is on the default branch is exactly what GitHub Pages serves.
 
 ```
 .
-├── index.html                # home: About, News, Selected Publications
-├── about/index.html          # the non-research page
+├── index.html                # home: About, News, Selected Publications, About Me
+├── about/index.html          # redirect to /#about-me (old links)
 ├── assets/
 │   ├── css/style.css         # all styling + design tokens (light & dark)
 │   ├── js/main.js            # scroll fade-in, click-to-copy email
@@ -51,13 +51,12 @@ plus a `--badge-neurips` value in both `:root` and the dark-mode block.
 Underline your own name in the author list with `<span class="me">Lingzhi Yuan</span>`.
 
 **The top nav** — one `<nav class="topnav">` block near the top of each page. Home-page
-items are in-page anchors (`#about`, `#news`, `#publications`, matching the `id` on each
-`<section>`); "About Me" points at the separate `/about/` page. Adding a section means
+items are in-page anchors (`#about`, `#news`, `#publications`, `#about-me`, matching the `id` on each
+`<section>`). Adding a section means
 adding an `id` and one `<a>`.
 
 **Photos** — shown uncropped at their native aspect ratio. `.portrait` is 300px wide on
-desktop; add `portrait--narrow` (230px) for tall portrait-orientation shots, as `/about/`
-does.
+desktop; add `portrait--narrow` (230px) for tall portrait-orientation shots.
 
 **Colors / fonts** — everything lives in the two token blocks at the top of `style.css`:
 `:root` holds the **dark** theme (the default for every visitor, regardless of their OS

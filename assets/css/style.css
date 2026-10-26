@@ -425,8 +425,14 @@ main {
   transition: opacity 0.15s ease;
 }
 
-.socials a:hover svg {
+.socials a:hover svg:not(.icon) {
   opacity: 0.4;
+}
+
+/* Leading line icon; stroke follows the link colour, hover included. */
+.socials .icon {
+  flex-shrink: 0;
+  margin-right: 0.1rem;
 }
 
 .intro-body {
@@ -665,9 +671,6 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  /* Keep the measure readable, and centred, now that nothing sits beside it. */
-  max-width: 760px;
-  margin-inline: auto;
 }
 
 /* Pages with no photo beside the intro (About Me): centre the heading over the
@@ -677,7 +680,8 @@ h1 {
   margin-inline: auto;
 }
 
-.prose h2 {
+.prose h2,
+.prose h3 {
   margin: 2rem 0 0;
   font-size: 1.15rem;
   font-weight: 600;
@@ -692,3 +696,12 @@ h1 {
   gap: 0.4rem;
 }
 
+/* --- Footer ------------------------------------------------------------- */
+
+.site-footer {
+  margin-top: 5rem;
+  padding: 2rem 0 2.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
